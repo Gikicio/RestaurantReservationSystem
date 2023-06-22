@@ -1,0 +1,330 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2a2a2a;
+  padding-top: 80px;
+  background: url("background.jpg");
+  background-size: cover;
+  color: #ffffff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333333; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  padding: 0 20px;
+  z-index: 1000;
+}
+
+.logo, .restaurant-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.restaurant-name {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.links {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Navigation */
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #444444; 
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Floorplan */
+#floorplan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.table {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 20px;
+  padding: 15px;
+  background-color: #444444;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 1.2em;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.available {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.reserved {
+  background-color: #F44336;
+  color: white;
+}
+
+.table:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.table-schedule {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.table-container {
+  position: relative;
+  margin: 20px;
+}
+
+/* Chairs */
+.chair {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #757575;
+  border-radius: 50%;
+}
+
+
+.chair:nth-child(1) { top: 66%; left: 0; transform: translate(-50%, -50%); }
+.chair:nth-child(2) { top: 33%; left: 0; transform: translate(-50%, -50%); }
+.chair:nth-child(3) { top: 66%; right: 0; transform: translate(50%, -50%); }
+.chair:nth-child(4) { top: 33%; right: 0; transform: translate(50%, -50%); }
+.chair:nth-child(5) { top: 0; left: 33%; transform: translate(-50%, -50%); }
+.chair:nth-child(6) { top: 0; left: 66%; transform: translate(-50%, -50%); }
+
+/* Form */
+#seatsInput {
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#date {
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+#checkAvailabilityButton, #confirmReservationButton {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#checkAvailabilityButton:hover, #confirmReservationButton:hover {
+  background-color: #45a049; 
+}
+
+#confirmReservationButton {
+  background-color: #008CBA;
+}
+
+#confirmReservationButton:hover {
+  background-color: #007ab3;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Schedule Container */
+#table-schedule-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+#table-schedule-container h3 {
+  margin-right: 20px;
+  font-size: 1.4em;
+  color: #ffffff; 
+}
+
+#booking-container {
+  margin: 20px;
+  background-color: #444444; 
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+/* Time Slot */
+.time-slot {
+  display: inline-block;
+  padding: 8px;
+  margin: 4px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.time-slot:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+.time-slot-reserved {
+  background-color: #EF5350;
+  color: white;
+}
+
+.time-slot-available {
+  background-color: #81C784;
+  color: white;
+}
+
+.time-slot-selected {
+  background-color: #42A5F5;
+  color: white;
+}
+
+/* User Menu */
+.user-menu {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.user-menu .user-submenu {
+  display: none;
+  cursor: pointer;
+  right: 0;
+  position: absolute;
+  background-color: #444444;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.4); 
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.user-menu:hover .user-submenu {
+  display: block;
+}
+
+.user-menu .user-submenu a {
+  color: #ffffff; 
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.user-menu .user-submenu a:hover {
+  background-color: #555555; 
+}
+
+.desktop-nav {
+    display: block;
+}
+
+/* Other sites */
+.form-container {
+  margin: 20px;
+  background-color: #444444;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+}
+
+.form-submit {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form-submit:hover {
+  background-color: #45a049;
+}
+
+.reservations-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  background-color: #444444;
+}
+
+.reservations-table th, .reservations-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.reservations-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
