@@ -3,6 +3,7 @@ session_start();
 
 require_once('db_connection.php');
 
+
 function register($username, $password, $first_name, $last_name, $email) {
   global $connection;
 
@@ -15,7 +16,7 @@ function register($username, $password, $first_name, $last_name, $email) {
 
   if($stmt = mysqli_prepare($connection, $sql)){
       mysqli_stmt_bind_param($stmt, "sssssss", $param_username, $param_password, $param_first_name, 
-              $param_last_name, $param_email, $param_user_type, $param_created_at);
+              $param_last_name, $param_email, $param_user_type, $param_created_at); 
       
       $param_username = $username;
       $param_password = $hashed_password;
